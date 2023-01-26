@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700;900&family=Sora:wght@400;700&display=swap");
+
+:root {
+  --primary: #0d6efd;
+  --dark: #21252f;
+  --body: #888;
+  /* --orange: rgb(221, 155, 94); */
+  --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  font-family: Sora, "sans-serif";
+  line-height: 1.7;
+  color: var(--body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-4 {
+  color: var(--dark);
+  font-weight: 700;
+}
+
+a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.navbar {
+  box-shadow: var(--box-shadow);
+}
+
+
+.navbar .nav-link {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.navbar .nav-link {
+  color: #fff !important;
+}
+
+.btn {
+  padding: 14px 18px;
+  border-width: 2px;
+  border-radius: 0;
+}
+
+.hero {
+  background-image: url(./img/sdg_poster.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 2;
+}
+
+.hero::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(37, 39, 71, 0.7);
+  z-index: -1;
+}
+
+section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/*追加*/
+.ui {
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 10px 15px 30px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.ui a {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff;
+  line-height: 100%;
+  color: #303030;
+  margin: 10px 3px;
+  border-radius: 50%;
+  position: relative;
+
+}
+.ui a i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.ui a:active {
+  color: #ff0000;
+}
+
+#snap {
+  max-width: 100%;
+  height: auto;
+  display: block;;
+  visibility: hidden;
+}
+.ui a.disabled {
+  pointer-events: none;
+  color: #cccccc;
+}
+#snap.visible {
+  visibility: visible;
+}
